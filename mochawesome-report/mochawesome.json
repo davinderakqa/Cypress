@@ -1,0 +1,103 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-03-13T12:06:02.073Z",
+    "end": "2020-03-13T12:06:20.922Z",
+    "duration": 18849,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "70166cd1-4675-41df-a962-2fd7acf199af",
+      "title": "",
+      "fullFile": "cypress/integration/examples/Create_Page.js",
+      "file": "cypress/integration/examples/Create_Page.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "44fc24c9-6ef6-456b-b780-274ec0ca7e16",
+          "title": "AEM Page Creation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "AEM Page Creation",
+              "fullTitle": "AEM Page Creation AEM Page Creation",
+              "timedOut": null,
+              "duration": 17287,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://author-cq-test1.navitas.bpglobal.com/sites.html/content/bp-test/countries/en/global\");\ncy.get('#username').type('madhur.batra@akqa.com');\ncy.get('#password').type('Password1!');\ncy.get('#submit-button').click();\ncy.title().should('eq', 'AEM Sites1');\ncy.get('.granite-collection-create.foundation-toggleable-control.coral3-Button.coral3-Button--primary').click();\ncy.contains('Page').click();\ncy.wait(2000);\ncy.contains('Navitas').click();\ncy.get('.is-selected > coral-panel-content > .foundation-layout-inline2 > .coral3-Button--primary > coral-button-label').click();\ncy.get('input[name*=\"jcr:title\"]').click().type('New Homepage');\ncy.get('input[name*=\"pageName\"]').click().type('new-homepage');\ncy.get('button[type=\"submit\"]').click();\ncy.wait(1000);\ncy.contains('Done').click({\n  force: true\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying: expected 'AEM Sites' to equal 'AEM Sites1'",
+                "estack": "CypressError: Timed out retrying: expected 'AEM Sites' to equal 'AEM Sites1'\n    at cypressErr (https://author-cq-test1.navitas.bpglobal.com/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (https://author-cq-test1.navitas.bpglobal.com/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (https://author-cq-test1.navitas.bpglobal.com/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (https://author-cq-test1.navitas.bpglobal.com/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (https://author-cq-test1.navitas.bpglobal.com/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (https://author-cq-test1.navitas.bpglobal.com/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (https://author-cq-test1.navitas.bpglobal.com/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (https://author-cq-test1.navitas.bpglobal.com/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (https://author-cq-test1.navitas.bpglobal.com/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (https://author-cq-test1.navitas.bpglobal.com/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://author-cq-test1.navitas.bpglobal.com/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://author-cq-test1.navitas.bpglobal.com/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (https://author-cq-test1.navitas.bpglobal.com/__cypress/runner/cypress_runner.js:162024:14)",
+                "diff": null
+              },
+              "uuid": "b25e93c5-c75d-44ac-baee-78761862170c",
+              "parentUUID": "44fc24c9-6ef6-456b-b780-274ec0ca7e16",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b25e93c5-c75d-44ac-baee-78761862170c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 17287,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {},
+      "version": "4.0.1"
+    }
+  }
+}

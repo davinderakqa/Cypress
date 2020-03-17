@@ -1,0 +1,9 @@
+{
+  "defaultCommandimeout": 6000,
+  "chromeWebSecurity": false,
+  "reporter": "junit",
+  "viewportHeight":1080,
+  "viewportWidth":1920,
+  
+  "projectId": "xgq9h7"
+}
